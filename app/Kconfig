@@ -25,6 +25,10 @@ config USB_DEVICE_PID
 config USB_DEVICE_MANUFACTURER
 	default "ZMK Project"
 	
+config PMW3389
+	bool
+	default y
+	
 menu "HID"
 
 choice ZMK_HID_REPORT_TYPE
@@ -468,9 +472,6 @@ choice CBPRINTF_IMPLEMENTATION
 	default CBPRINTF_NANO
 
 endchoice
-
-config PMW3389
-	bool
 
 module = ZMK
 module-str = zmk
