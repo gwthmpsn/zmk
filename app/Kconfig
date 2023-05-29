@@ -45,15 +45,6 @@ config ZMK_HID_REPORT_TYPE_NKRO
 
 endchoice
 
-choice PMW3389
-	prompt "Dummy prompt"
-	
-config PMW3389
-	bool
-	default y
-	
-endchoice
-
 if ZMK_HID_REPORT_TYPE_HKRO
 
 config ZMK_HID_KEYBOARD_REPORT_SIZE
