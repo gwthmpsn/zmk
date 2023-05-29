@@ -24,7 +24,7 @@ config USB_DEVICE_PID
 
 config USB_DEVICE_MANUFACTURER
 	default "ZMK Project"
-
+	
 menu "HID"
 
 choice ZMK_HID_REPORT_TYPE
@@ -471,7 +471,6 @@ endchoice
 
 config PMW3389
 	bool
-	default y
 
 module = ZMK
 module-str = zmk
