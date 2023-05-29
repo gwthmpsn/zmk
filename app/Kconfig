@@ -469,9 +469,6 @@ choice CBPRINTF_IMPLEMENTATION
 
 endchoice
 
-config PMW3389
-	default y
-
 module = ZMK
 module-str = zmk
 source "subsys/logging/Kconfig.template.log_config"
