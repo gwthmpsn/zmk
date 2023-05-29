@@ -25,10 +25,6 @@ config USB_DEVICE_PID
 config USB_DEVICE_MANUFACTURER
 	default "ZMK Project"
 	
-config PMW3389
-	bool
-	default y
-	
 menu "HID"
 
 choice ZMK_HID_REPORT_TYPE
@@ -46,6 +42,9 @@ config ZMK_HID_REPORT_TYPE_NKRO
 	  Enable full N-Key Roll Over for HID output. This selection will prevent the keyboard
 	  from working with some BIOS/UEFI versions that only support "boot keyboard" support.
 	  This option also prevents using some infrequently used higher range HID usages.
+
+config PMW3389
+	bool
 
 endchoice
 
