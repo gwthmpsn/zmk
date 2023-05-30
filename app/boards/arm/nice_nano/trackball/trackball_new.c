@@ -1,6 +1,9 @@
-#ifdef CONFIG_PMW3389
-#define DT_DRV_COMPAT pixart_pmw3389
-#include <pixart/pmw3389/pmw3389.h>
+#ifdef CONFIG_PMW3360
+#define DT_DRV_COMPAT pixart_pmw3360
+#include <pixart/pmw3360/pmw3360.h>
+#elif defined(CONFIG_PAW3395)
+#define DT_DRV_COMPAT pixart_paw3395
+#include <pixart/paw3395/paw3395.h>
 #endif
 
 #include <logging/log.h>
