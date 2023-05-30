@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 
 zephyr_include_directories(.)
-zephyr_include_directories_ifdef(CONFIG_PMW33XX_3389 CONFIG_PMW33XX_3389_SROM_INCLUDE_DIR)
+# zephyr_include_directories_ifdef(CONFIG_PMW33XX_3389 CONFIG_PMW33XX_3389_SROM_INCLUDE_DIR)
 
 zephyr_library()
 
