@@ -79,7 +79,7 @@ LOG_MODULE_REGISTER(pmw3360, CONFIG_PMW3360_LOG_LEVEL);
 
 /* Sensor identification values */
 #define PMW3360_PRODUCT_ID			0x42
-#define PMW3360_FIRMWARE_ID			0xBD
+#define PMW3360_FIRMWARE_ID			0xe8
 
 /* Max register count readable in a single motion burst */
 #define PMW3360_MAX_BURST_SIZE			12
