@@ -14,7 +14,7 @@ if PMW3360
 
 config PMW3360_CPI
 	int "PMW3360's default CPI"
-	default 800 # 1600
+	default 400 # 1600
 	range 100 12000
 	help
 	  Default CPI value.
