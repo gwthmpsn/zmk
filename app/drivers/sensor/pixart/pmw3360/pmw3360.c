@@ -642,6 +642,7 @@ static int pmw3360_async_init_fw_load_verify(const struct device *dev)
 
 	if (product_id != PMW3360_PRODUCT_ID) {
 		LOG_ERR("Invalid product id!");
+		LOG_ERR("Optical chip product ID: 0x%x", product_id);
 		return -EIO;
 	}
 
