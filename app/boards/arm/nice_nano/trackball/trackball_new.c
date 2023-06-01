@@ -68,10 +68,12 @@ static void trackball_poll_handler(struct k_work *work) {
         data->x *= SENSOR_VALUE_MULTIPLIER;
         data->y = -(SENSOR_VALUE_MULTIPLIER*data->y);
         if (abs(data->x) > TRACKBALL_LAYER_THRESHOLD || abs(data->y) > TRACKBALL_LAYER_THRESHOLD) {
-            if (!atomic_test_and_set_bit(timer_set_bit, 1)) {
-                zmk_keymap_layer_activate(CONFIG_MOUSE_LAYER_INDEX);
-                k_timer_start(&mouse_layer_timer, K_MSEC(CONFIG_MOUSE_LAYER_ACTIVE_MS), K_NO_WAIT);
-            }
+            if (!zmk_keymap_layer_active(CONFIG_MOUSE_LAYER_INDEX)) { // If the MOUSE_LAYER is NOT currently active
+				if (!atomic_test_and_set_bit(timer_set_bit, 1)) {	
+					zmk_keymap_layer_activate(CONFIG_MOUSE_LAYER_INDEX); // Activate MOUSE_LAYER 
+					k_timer_start(&mouse_layer_timer, K_MSEC(CONFIG_MOUSE_LAYER_ACTIVE_MS), j); // for MOUSE_LAYER_ACTIVE_MS
+				}
+			}
         }
 
         if (zmk_keymap_layer_active(CONFIG_SCROLL_LAYER_INDEX)) { // lower
