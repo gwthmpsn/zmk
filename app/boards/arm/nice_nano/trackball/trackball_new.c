@@ -16,7 +16,7 @@
 
 #include <zmk/event_manager.h>
 #include <zmk/events/endpoint_selection_changed.h>
-#include <sys/atomic.h>
+#include <zephyr/sys/atomic.h>
 
 #define SCROLL_DIV_FACTOR 10
 /* #define SCROLL_LAYER_INDEX 4 */
