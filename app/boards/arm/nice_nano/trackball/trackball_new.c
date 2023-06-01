@@ -18,7 +18,7 @@
 #include <zmk/events/endpoint_selection_changed.h>
 #include <sys/atomic.h>
 
-#define SCROLL_DIV_FACTOR 5
+#define SCROLL_DIV_FACTOR 7
 /* #define SCROLL_LAYER_INDEX 4 */
 #define SCROLL_LAYER_INDEX                                                                         \
     COND_CODE_0(DT_INST_NODE_HAS_PROP(0, scroll_layer), (255), (DT_INST_PROP(0, scroll_layer)))
@@ -71,7 +71,7 @@ static void trackball_poll_handler(struct k_work *work) {
             if (!zmk_keymap_layer_active(CONFIG_MOUSE_LAYER_INDEX)) { // If the MOUSE_LAYER is NOT currently active
 				if (!atomic_test_and_set_bit(timer_set_bit, 1)) {	
 					zmk_keymap_layer_activate(CONFIG_MOUSE_LAYER_INDEX); // Activate MOUSE_LAYER 
-					k_timer_start(&mouse_layer_timer, K_MSEC(CONFIG_MOUSE_LAYER_ACTIVE_MS), j); // for MOUSE_LAYER_ACTIVE_MS
+					k_timer_start(&mouse_layer_timer, K_MSEC(CONFIG_MOUSE_LAYER_ACTIVE_MS), K_NO_WAIT); // for MOUSE_LAYER_ACTIVE_MS
 				}
 			}
         }
