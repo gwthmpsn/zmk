@@ -3,3 +3,7 @@
 
 rsource "battery/Kconfig"
 rsource "ec11/Kconfig"
+rsource "cirque_trackpad/Kconfig"
+rsource "pmw33xx/Kconfig"
+rsource "pixart/pmw3360/Kconfig"
+rsource "pixart/pmw3389/Kconfig"

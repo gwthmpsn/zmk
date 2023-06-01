@@ -1,7 +1,19 @@
 # SPDX-License-Identifier: MIT
 
 config BOARD_ENABLE_DCDC
-    bool "Enable DCDC mode"
-    select SOC_DCDC_NRF52X
-    default y
-    depends on (BOARD_NICE_NANO || BOARD_NICE_NANO_V2)
+	bool "Enable DCDC mode"
+	select SOC_DCDC_NRF52X
+	default y
+	depends on (BOARD_NICE_NANO || BOARD_NICE_NANO_V2)
+
+config MOUSE_LAYER_INDEX
+	int "Index of mouse layer"
+	default 4
+
+config SCROLL_LAYER_INDEX
+	int "Index of scroll layer"
+	default 5
+
+config MOUSE_LAYER_ACTIVE_MS
+	int "Amount of milliseconds the mouse layer will be active after using the trackball"
+	default 400
