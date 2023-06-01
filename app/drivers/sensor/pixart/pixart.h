@@ -8,9 +8,9 @@
  */
 
 #include <zephyr/device.h>
-#include <drivers/spi.h>
-#include <drivers/gpio.h>
-#include <drivers/sensor.h>
+#include <zephyr/drivers/spi.h>
+#include <zephyr/drivers/gpio.h>
+#include <zephyr/drivers/sensor.h>
 
 #ifdef __cplusplus
 extern "C" {
