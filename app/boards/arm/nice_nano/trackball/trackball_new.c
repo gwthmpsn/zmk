@@ -6,7 +6,7 @@
 #include <pixart/paw3395/paw3395.h>
 #endif
 
-#include <logging/log.h>
+#include <zephyr/logging/log.h>
 #include <zmk/hid.h>
 #include <zmk/endpoints.h>
 #include <zmk/keymap.h>
