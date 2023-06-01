@@ -14,6 +14,6 @@ properties:
   mods:
     type: int
     required: true
-  masked-mods:
+  masked_mods:
     type: int
     required: false
