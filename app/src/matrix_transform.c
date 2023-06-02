@@ -22,7 +22,7 @@
         KT_COL(DT_PROP_BY_IDX(ZMK_KEYMAP_TRANSFORM_NODE, map, i))] = i + INDEX_OFFSET
 static uint32_t transform[] = {UTIL_LISTIFY(ZMK_KEYMAP_LEN, TRANSFORM_ENTRY, (, ), 0)};
 #endif
-int32_t zmk_matrix_transform_row_column_to_position(uint32_t row, uint32_t column) {
+uint32_t zmk_matrix_transform_row_column_to_position(uint32_t row, uint32_t column) {
 #if DT_NODE_HAS_PROP(ZMK_KEYMAP_TRANSFORM_NODE, col_offset)
     column += DT_PROP(ZMK_KEYMAP_TRANSFORM_NODE, col_offset);
 #endif
