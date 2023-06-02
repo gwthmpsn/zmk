@@ -59,6 +59,13 @@
     pinctrl-names = "default", "sleep";
 };
 
+&spi0 {
+    compatible = "nordic,nrf-twi";
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
+};
+
 &usbd {
     status = "okay";
     cdc_acm_uart: cdc_acm_uart {
