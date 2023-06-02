@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <kernel.h>
+#include <zephyr.h>
 #include <zmk/matrix_transform.h>
 #include <zmk/matrix.h>
 #include <dt-bindings/zmk/matrix_transform.h>

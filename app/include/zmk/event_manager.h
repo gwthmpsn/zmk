@@ -8,7 +8,7 @@
 
 #include <stddef.h>
 #include <kernel.h>
-#include <types.h>
+#include <zephyr/types.h>
 
 struct zmk_event_type {
     const char *name;
