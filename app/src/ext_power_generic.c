@@ -7,18 +7,18 @@
 #define DT_DRV_COMPAT zmk_ext_power_generic
 
 #include <stdio.h>
-#include <zephyr/device.h>
-#include <zephyr/pm/device.h>
-#include <zephyr/init.h>
-#include <zephyr/kernel.h>
-#include <zephyr/settings/settings.h>
-#include <zephyr/drivers/gpio.h>
+#include <device.h>
+#include <pm/device.h>
+#include <init.h>
+#include <kernel.h>
+#include <settings/settings.h>
+#include <drivers/gpio.h>
 
 #include <drivers/ext_power.h>
 
 #if DT_HAS_COMPAT_STATUS_OKAY(DT_DRV_COMPAT)
 
-#include <zephyr/logging/log.h>
+#include <logging/log.h>
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 struct ext_power_generic_config {

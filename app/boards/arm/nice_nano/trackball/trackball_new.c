@@ -6,7 +6,7 @@
 #include <pixart/paw3395/paw3395.h>
 #endif
 
-#include <zephyr/logging/log.h>
+#include <logging/log.h>
 #include <zmk/hid.h>
 #include <zmk/endpoints.h>
 #include <zmk/keymap.h>
@@ -16,7 +16,7 @@
 
 #include <zmk/event_manager.h>
 #include <zmk/events/endpoint_selection_changed.h>
-#include <zephyr/sys/atomic.h>
+#include <sys/atomic.h>
 
 #define SCROLL_DIV_FACTOR 10
 /* #define SCROLL_LAYER_INDEX 4 */

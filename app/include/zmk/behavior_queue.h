@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <zephyr/kernel.h>
+#include <kernel.h>
 #include <stdint.h>
 #include <zmk/behavior.h>
 

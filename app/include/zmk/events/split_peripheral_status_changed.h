@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <zephyr/kernel.h>
+#include <kernel.h>
 #include <zmk/event_manager.h>
 
 struct zmk_split_peripheral_status_changed {

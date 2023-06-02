@@ -1,7 +1,9 @@
 {
   "files.associations": {
     "*.overlay": "dts",
-    "*.keymap": "dts"
+    "*.keymap": "dts",
+    "mouse.h": "c",
+    "endpoint_selection_changed.h": "c"
   },
   "python.formatting.provider": "black"
 }

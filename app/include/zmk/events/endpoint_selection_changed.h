@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <zephyr/kernel.h>
+#include <kernel.h>
 
 #include <zmk/endpoints_types.h>
 #include <zmk/event_manager.h>

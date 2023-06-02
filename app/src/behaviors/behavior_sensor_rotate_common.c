@@ -1,8 +1,8 @@
 
-#include <zephyr/device.h>
-#include <zephyr/drivers/sensor.h>
-#include <zephyr/logging/log.h>
-#include <zephyr/kernel.h>
+#include <device.h>
+#include <drivers/sensor.h>
+#include <logging/log.h>
+#include <kernel.h>
 
 #include <zmk/behavior_queue.h>
 

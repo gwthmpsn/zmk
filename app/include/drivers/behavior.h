@@ -6,11 +6,11 @@
 
 #pragma once
 
-#include <zephyr/types.h>
+#include <types.h>
 #include <stddef.h>
-#include <zephyr/sys/util.h>
+#include <sys/util.h>
 #include <string.h>
-#include <zephyr/device.h>
+#include <device.h>
 #include <zmk/keys.h>
 #include <zmk/behavior.h>
 

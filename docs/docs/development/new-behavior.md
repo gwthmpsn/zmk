@@ -137,9 +137,9 @@ The code snippet below shows the essential components of a new driver.
 #define DT_DRV_COMPAT zmk_<behavior_name>
 
 // Dependencies
-#include <zephyr/device.h>
+#include <device.h>
 #include <drivers/behavior.h>
-#include <zephyr/logging/log.h>
+#include <logging/log.h>
 
 #include <zmk/behavior.h>
 

@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <zephyr/kernel.h>
+#include <kernel.h>
 #include <dt-bindings/zmk/mouse.h>
 
 typedef uint16_t zmk_mouse_button_flags_t;

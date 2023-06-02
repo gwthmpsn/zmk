@@ -6,9 +6,9 @@
 
 #define DT_DRV_COMPAT zmk_behavior_rgb_underglow
 
-#include <zephyr/device.h>
+#include <device.h>
 #include <drivers/behavior.h>
-#include <zephyr/logging/log.h>
+#include <logging/log.h>
 
 #include <dt-bindings/zmk/rgb.h>
 #include <zmk/rgb_underglow.h>

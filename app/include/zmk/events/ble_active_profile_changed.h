@@ -6,9 +6,9 @@
 
 #pragma once
 
-#include <zephyr/kernel.h>
+#include <kernel.h>
 #include <zmk/event_manager.h>
-#include <zephyr/device.h>
+#include <device.h>
 
 #include <zmk/ble/profile.h>
 

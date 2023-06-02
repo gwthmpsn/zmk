@@ -6,9 +6,9 @@
 
 #define DT_DRV_COMPAT zmk_behavior_backlight
 
-#include <zephyr/device.h>
+#include <device.h>
 #include <drivers/behavior.h>
-#include <zephyr/logging/log.h>
+#include <logging/log.h>
 
 #include <dt-bindings/zmk/backlight.h>
 #include <zmk/backlight.h>

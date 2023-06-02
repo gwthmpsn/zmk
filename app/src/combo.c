@@ -6,10 +6,10 @@
 
 #define DT_DRV_COMPAT zmk_combos
 
-#include <zephyr/device.h>
-#include <zephyr/logging/log.h>
-#include <zephyr/sys/dlist.h>
-#include <zephyr/kernel.h>
+#include <device.h>
+#include <logging/log.h>
+#include <sys/dlist.h>
+#include <kernel.h>
 
 #include <drivers/behavior.h>
 

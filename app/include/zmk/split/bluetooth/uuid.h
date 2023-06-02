@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <zephyr/bluetooth/uuid.h>
+#include <bluetooth/uuid.h>
 
 #ifndef BT_UUID_NUM_OF_DIGITALS
 #define BT_UUID_NUM_OF_DIGITALS BT_UUID_DECLARE_16(0x2909)

@@ -1,4 +1,4 @@
-#include <zephyr/types.h>
+#include <types.h>
 #include <stdlib.h>
 #include "paw3395.h"
 

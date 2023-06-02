@@ -15,7 +15,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THIS
 SROM OR THE USE OR OTHER DEALINGS IN THIS SROM.
 */
 
-#include <zephyr/types.h>
+#include <types.h>
 #include <stdlib.h>
 
 const size_t pmw3389_firmware_length = 4094;

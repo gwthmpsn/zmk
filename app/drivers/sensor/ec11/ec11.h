@@ -6,9 +6,9 @@
 
 #pragma once
 
-#include <zephyr/device.h>
-#include <zephyr/drivers/gpio.h>
-#include <zephyr/sys/util.h>
+#include <device.h>
+#include <drivers/gpio.h>
+#include <sys/util.h>
 
 struct ec11_config {
     const struct gpio_dt_spec a;

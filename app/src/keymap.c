@@ -5,9 +5,9 @@
  */
 
 #include <drivers/behavior.h>
-#include <zephyr/sys/util.h>
-#include <zephyr/bluetooth/bluetooth.h>
-#include <zephyr/logging/log.h>
+#include <sys/util.h>
+#include <bluetooth/bluetooth.h>
+#include <logging/log.h>
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #include <zmk/behavior.h>

@@ -7,8 +7,8 @@
 #pragma once
 
 #include <stddef.h>
-#include <zephyr/kernel.h>
-#include <zephyr/types.h>
+#include <kernel.h>
+#include <types.h>
 
 struct zmk_event_type {
     const char *name;

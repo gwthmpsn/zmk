@@ -7,7 +7,7 @@
 #define ZEPHYR_DRIVERS_SENSOR_PIXART_PMW33XX_H_
 
 #include <drivers/sensor.h>
-#include <zephyr/types.h>
+#include <types.h>
 #include <drivers/gpio.h>
 #include <sys/util.h>
 #include <drivers/spi.h>

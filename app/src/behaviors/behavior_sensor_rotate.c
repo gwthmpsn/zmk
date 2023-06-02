@@ -6,7 +6,7 @@
 
 #define DT_DRV_COMPAT zmk_behavior_sensor_rotate
 
-#include <zephyr/device.h>
+#include <device.h>
 
 #include <drivers/behavior.h>
 

@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <zephyr/kernel.h>
+#include <kernel.h>
 #include <dt-bindings/zmk/keys.h>
 
 typedef uint32_t zmk_key_t;

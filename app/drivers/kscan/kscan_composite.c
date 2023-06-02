@@ -6,9 +6,9 @@
 
 #define DT_DRV_COMPAT zmk_kscan_composite
 
-#include <zephyr/device.h>
-#include <zephyr/drivers/kscan.h>
-#include <zephyr/logging/log.h>
+#include <device.h>
+#include <drivers/kscan.h>
+#include <logging/log.h>
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #define MATRIX_NODE_ID DT_DRV_INST(0)

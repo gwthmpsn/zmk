@@ -6,6 +6,6 @@
 
 #pragma once
 
-#include <zephyr/device.h>
+#include <device.h>
 
 int zmk_kscan_init(const struct device *dev);

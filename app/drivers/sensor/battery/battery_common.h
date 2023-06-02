@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <zephyr/drivers/sensor.h>
+#include <drivers/sensor.h>
 #include <stdint.h>
 
 struct battery_value {
