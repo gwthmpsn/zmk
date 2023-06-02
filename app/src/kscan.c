@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <zephyr/kernel.h>
+#include <kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/bluetooth/addr.h>
 #include <zephyr/drivers/kscan.h>
