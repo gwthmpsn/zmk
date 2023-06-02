@@ -70,12 +70,12 @@ void activity_work_handler(struct k_work *work) {
     if (inactive_time > MAX_SLEEP_MS && !is_usb_power_present()) {
         // Put devices in suspend power mode before sleeping
         set_state(ZMK_ACTIVITY_SLEEP);
-        pm_state_force(0U, &(struct pm_state_info){PM_STATE_SOFT_OFF, 0, 0});
+        pm_power_state_force(0U, (struct pm_state_info){PM_STATE_SOFT_OFF, 0, 0});
     } else
 #endif /* IS_ENABLED(CONFIG_ZMK_SLEEP) */
         if (inactive_time > MAX_IDLE_MS) {
-            set_state(ZMK_ACTIVITY_IDLE);
-        }
+        set_state(ZMK_ACTIVITY_IDLE);
+    }
 }
 
 K_WORK_DEFINE(activity_work, activity_work_handler);
