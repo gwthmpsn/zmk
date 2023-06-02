@@ -1,20 +1,18 @@
-# Copyright (c) 2022 The ZMK Contributors
-# SPDX-License-Identifier: MIT
+#
+# Copyright (c) 2019 Nordic Semiconductor
+#
+# SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+#
+
+
 description: |
-  Sensor driver for the pixart PMW3360 optical mouse sensor 
+    This is a representation of the PMW3360 optical motion sensor
 
 compatible: "pixart,pmw3360"
 
 include: spi-device.yaml
 
 properties:
-  label:
-    type: string
-    required: true
-  irq-gpios:
-    type: phandle-array
-    required: true
-  scroll-layer:
-    type: int
-    description: the momentary layer used to modifiy move to scroll
-    required: false
+    irq-gpios:
+      type: phandle-array
+      required: true
