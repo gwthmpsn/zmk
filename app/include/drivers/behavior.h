@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <types.h>
+#include <zephyr/types.h>
 #include <stddef.h>
 #include <sys/util.h>
 #include <string.h>
