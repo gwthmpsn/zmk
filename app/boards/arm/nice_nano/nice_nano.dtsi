@@ -68,7 +68,7 @@
 	cs-gpios = <&gpio0 24 GPIO_ACTIVE_HIGH>; // P0.24
 	irq-gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;
 
-    trackball: spi@40003000 {
+    trackball: trackball@0 {
         compatible = "pixart,pmw3360";
         label = "Pixart PMW3360";
 		reg = <0>;
