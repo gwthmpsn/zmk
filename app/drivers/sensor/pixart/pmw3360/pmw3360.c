@@ -8,6 +8,12 @@
 
 #include <zephyr/kernel.h>
 #include <zephyr/sys/byteorder.h>
+#include <zephyr/device.h>
+#include <zephyr/drivers/gpio.h>
+#include <zephyr/sys/util.h>
+#include <zephyr/drivers/sensor.h>
+#include <zephyr/sys/__assert.h>
+#include <zephyr/logging/log.h>
 #include "pmw3360.h"
 
 #include <zephyr/logging/log.h>
