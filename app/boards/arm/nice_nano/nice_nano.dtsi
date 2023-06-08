@@ -26,6 +26,12 @@
             label = "Blue LED";
         };
     };
+	
+	trackball: trackball {
+		compatible = "pixart,pmw3360";
+		label = "trackball";
+		irq-gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;
+		status = "okay";
 };
 
 &adc {
@@ -66,14 +72,16 @@
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
 	cs-gpios = <&gpio0 24 GPIO_ACTIVE_HIGH>; // P0.24
-	irq-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
+	irq-gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;
 
+/*
     trackball: trackball@0 {
         label = "Pixart PMW3360";
 		reg = <0>;
 		spi-max-frequency = <2000000>;
         scroll-layer = <5>;
     };
+*/
 };
 
 &usbd {
