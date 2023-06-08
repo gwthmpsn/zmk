@@ -22,4 +22,8 @@ config ZMK_BLE
 config ZMK_USB
     default y
 
+CONFIG_PINCTRL=y
+
+CONFIG_GPIO=y
+
 endif # BOARD_NICE_NANO || BOARD_NICE_NANO_V2
