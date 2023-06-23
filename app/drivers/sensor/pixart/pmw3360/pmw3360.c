@@ -121,6 +121,8 @@ extern const uint8_t pmw3360_firmware_data[];
 // init is done in non-blocking manner (i.e., async), a delayable work is defined for this job
 // see pmw3360_init and pmw3360_async_init)
 
+const struct device *dev = DEVICE_DT_GET(DT_NODELABEL(trackball));
+
 enum async_init_step {
 	ASYNC_INIT_STEP_POWER_UP, // power up reset
 	ASYNC_INIT_STEP_FW_LOAD_START, // clear motion registers, disable REST mode, enable SROM register
