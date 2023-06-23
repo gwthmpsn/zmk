@@ -1070,7 +1070,6 @@ static const struct sensor_driver_api pmw3360_driver_api = {
 	static struct pixart_data data##n;				       \
 									       \
 	static const struct pixart_config config##n = {		       \
-		.irq_gpio = SPI_IRQ_GPIO_DT_SPEC_INST_GET(n, irq_gpios),	       \
 		.bus = {						       \
 			.bus = DEVICE_DT_GET(DT_INST_BUS(n)),		       \
 			.config = {					       \
@@ -1083,6 +1082,7 @@ static const struct sensor_driver_api pmw3360_driver_api = {
 			},						       \
 		},							       \
 		.cs_gpio = SPI_CS_GPIOS_DT_SPEC_GET(DT_DRV_INST(n)),	       \
+		.irq_gpio = GPIO_DT_SPEC_INST_GET(n, irq_gpios),	       \
 	};								       \
 									       \
 	DEVICE_DT_INST_DEFINE(n, pmw3360_init, NULL, &data##n, &config##n,     \
