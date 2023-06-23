@@ -85,6 +85,22 @@
 */
 };
 
+&spi1 {
+    compatible = "nordic,nrf-spim";
+    status = "okay";
+    pinctrl-0 = <&spi1_default_alt>;
+    pinctrl-1 = <&spi1_sleep_alt>;
+    pinctrl-names = "default", "sleep";
+    cs-gpios = <&gpio0 24 GPIO_ACTIVE_LOW>;
+
+    pmw3360@0 {
+            compatible = "pixart,pmw3360";
+            reg = <0>;
+            irq-gpios = <&gpio0 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+            spi-max-frequency = <2000000>;
+    };
+};
+
 &usbd {
     status = "okay";
     cdc_acm_uart: cdc_acm_uart {
