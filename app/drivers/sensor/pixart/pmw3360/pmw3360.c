@@ -981,9 +981,9 @@ static int pmw3360_attr_set(const struct device *dev, enum sensor_channel chan,
 	}
 
 	switch ((uint32_t)attr) {
-	// case PMW3360_ATTR_CPI:
-	//	err = update_cpi(dev, PMW3360_SVALUE_TO_CPI(*val));
-	//	break;
+	case PMW3360_ATTR_CPI:
+		err = update_cpi(dev, PMW3360_SVALUE_TO_CPI(*val));
+		break;
 
 	case PMW3360_ATTR_REST_ENABLE:
 		err = toggle_rest_modes(dev,
