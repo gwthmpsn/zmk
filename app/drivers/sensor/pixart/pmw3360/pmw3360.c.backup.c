@@ -17,6 +17,7 @@
 #include "pmw3360.h"
 
 #include <zephyr/logging/log.h>
+
 LOG_MODULE_REGISTER(pmw3360, CONFIG_PMW3360_LOG_LEVEL);
 
 /* Timings defined by spec (in us) */
@@ -111,7 +112,6 @@ LOG_MODULE_REGISTER(pmw3360, CONFIG_PMW3360_LOG_LEVEL);
 #define PMW3360_SVALUE_TO_TIME(svalue) ((uint32_t)(svalue).val1)
 #define PMW3360_SVALUE_TO_BOOL(svalue) ((svalue).val1 != 0)
 
-
 /* SROM firmware meta-data, defined in pmw3360_piv.c */
 extern const size_t pmw3360_firmware_length;
 extern const uint8_t pmw3360_firmware_data[];
@@ -131,6 +131,28 @@ enum async_init_step {
 	ASYNC_INIT_STEP_CONFIGURE, // set cpi and donwshift time (run, rest1, rest2)
 
 	ASYNC_INIT_STEP_COUNT // end flag
+};
+
+// added
+struct pmw3360_data {
+	const struct device          *dev;
+	struct gpio_callback         irq_gpio_cb;
+	struct k_spinlock            lock;
+	int16_t                      x;
+	int16_t                      y;
+	sensor_trigger_handler_t     data_ready_handler;
+	struct k_work                trigger_handler_work;
+	struct k_work_delayable      init_work;
+	enum async_init_step         async_init_step;
+	int                          err;
+	bool                         ready;
+	bool                         last_read_burst;
+};
+
+struct pmw3360_config {
+	struct gpio_dt_spec irq_gpio;
+	struct spi_dt_spec bus;
+	struct gpio_dt_spec cs_gpio;
 };
 
 // delay (ms) in between steps

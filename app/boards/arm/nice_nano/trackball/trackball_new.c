@@ -48,10 +48,10 @@ K_TIMER_DEFINE(mouse_layer_timer, deactivate_mouse_layer, NULL);
 // polling work
 static void trackball_poll_handler(struct k_work *work) {
     // get the device pointer
-    struct pixart_data *data = CONTAINER_OF(work, struct pixart_data, poll_work);
+    struct pmw3360_data *data = CONTAINER_OF(work, struct pmw3360_data, poll_work);
     const struct device *dev = data->dev;
 
-    // fetch dx and dy from sensor and save them into pixart_data structure
+    // fetch dx and dy from sensor and save them into pmw3360_data structure
     int ret = sensor_sample_fetch(dev);
     if (ret < 0) {
         LOG_ERR("fetch: %d", ret);
@@ -95,7 +95,7 @@ static void trackball_poll_handler(struct k_work *work) {
 
 // trigger handler
 static void trackball_trigger_handler(const struct device *dev, const struct sensor_trigger *trig) {
-    struct pixart_data *data = dev->data;
+    struct pmw3360_data *data = dev->data;
 
     // do not resume motion interrupt by passing-in null handler
     struct sensor_trigger trigger = {
@@ -112,7 +112,7 @@ static void trackball_trigger_handler(const struct device *dev, const struct sen
 
 // timer expiry function
 void trackball_timer_expiry(struct k_timer *timer) {
-    struct pixart_data *data = CONTAINER_OF(timer, struct pixart_data, poll_timer);
+    struct pmw3360_data *data = CONTAINER_OF(timer, struct pmw3360_data, poll_timer);
 
     // check whether reaching the polling count limit
     if (polling_count < max_poll_count) {
@@ -129,7 +129,7 @@ void trackball_timer_expiry(struct k_timer *timer) {
 
 // timer stop function
 void trackball_timer_stop(struct k_timer *timer) {
-    struct pixart_data *data = CONTAINER_OF(timer, struct pixart_data, poll_timer);
+    struct pmw3360_data *data = CONTAINER_OF(timer, struct pmw3360_data, poll_timer);
     const struct device *dev = data->dev;
 
     // reset polling count
@@ -155,7 +155,7 @@ static int trackball_init() {
 
     // get the sensor device instance
     const struct device *dev = DEVICE_DT_GET(DT_DRV_INST(0));
-    struct pixart_data *data = dev->data;
+    struct pmw3360_data *data = dev->data;
 
     // setup the timer and handler function of the polling work
     k_timer_init(&data->poll_timer, trackball_timer_expiry, trackball_timer_stop);

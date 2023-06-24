@@ -66,23 +66,6 @@
     pinctrl-names = "default", "sleep";
 };
 
-/*&spi0 {
-    status = "okay";
-	compatible = "pixart,pmw3360";
-    pinctrl-0 = <&spi0_default>;
-    pinctrl-1 = <&spi0_sleep>;
-    pinctrl-names = "default", "sleep";
-	cs-gpios = <&gpio0 24 GPIO_ACTIVE_HIGH>; // P0.24
-	irq-gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;
-
-    trackball: trackball@0 {
-        label = "Pixart PMW3360";
-		reg = <0>;
-		spi-max-frequency = <2000000>;
-        scroll-layer = <5>;
-    };
-};*/
-
 &spi1 {
     compatible = "nordic,nrf-spim";
     status = "okay";
