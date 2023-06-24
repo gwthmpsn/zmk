@@ -84,11 +84,7 @@ LOG_MODULE_REGISTER(pmw3360, CONFIG_PMW3360_LOG_LEVEL);
 #define PMW3360_REG_RAW_DATA_BURST		0x64
 #define PMW3360_REG_LIFTCUTOFF_TUNE2		0x65
 
-/* Sensor identification values 
-#define PMW3360_PRODUCT_ID			0x42
-#define PMW3360_FIRMWARE_ID			0x04
-*/
-
+/* Sensor identification values */
 #define PMW3360_PRODUCT_ID			0x47
 #define PMW3360_FIRMWARE_ID			0xe8
 
@@ -985,9 +981,9 @@ static int pmw3360_attr_set(const struct device *dev, enum sensor_channel chan,
 	}
 
 	switch ((uint32_t)attr) {
-	case PMW3360_ATTR_CPI:
-		err = update_cpi(dev, PMW3360_SVALUE_TO_CPI(*val));
-		break;
+	// case PMW3360_ATTR_CPI:
+	//	err = update_cpi(dev, PMW3360_SVALUE_TO_CPI(*val));
+	//	break;
 
 	case PMW3360_ATTR_REST_ENABLE:
 		err = toggle_rest_modes(dev,
