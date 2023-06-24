@@ -1051,7 +1051,6 @@ static const struct sensor_driver_api pmw3360_driver_api = {
 	static const struct pmw3360_config config##n = {		       \
 		.irq_gpio = GPIO_DT_SPEC_INST_GET(n, irq_gpios),	       \
 		.bus = {						       \
-			.cs_gpio = SPI_CS_GPIOS_DT_SPEC_GET(DT_DRV_INST(n)),	       \
 			.bus = DEVICE_DT_GET(DT_INST_BUS(n)),		       \
 			.config = {					       \
 				.frequency = DT_INST_PROP(n,		       \
@@ -1062,6 +1061,7 @@ static const struct sensor_driver_api pmw3360_driver_api = {
 				.slave = DT_INST_REG_ADDR(n),		       \
 			},						       \
 		},							       \
+		.cs_gpio = SPI_CS_GPIOS_DT_SPEC_GET(DT_DRV_INST(n)),	       \
 	};								       \
 									       \
 	DEVICE_DT_INST_DEFINE(n, pmw3360_init, NULL, &data##n, &config##n,     \
