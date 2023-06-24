@@ -13,6 +13,7 @@
  */
 
 #include <zephyr/drivers/sensor.h>
+#include "../pixart.h"
 
 #ifdef __cplusplus
 extern "C" {
