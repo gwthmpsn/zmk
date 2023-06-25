@@ -59,6 +59,7 @@
     pinctrl-names = "default", "sleep";
 };
 
+/*
 &spi1 {
     compatible = "nordic,nrf-spim";
     status = "okay";
@@ -67,7 +68,6 @@
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 24 GPIO_ACTIVE_HIGH>;
 
-/*
     trackball@0 {
             compatible = "pixart,pmw3360";
             reg = <0>;
