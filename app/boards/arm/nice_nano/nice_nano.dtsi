@@ -59,7 +59,7 @@
     pinctrl-names = "default", "sleep";
 };
 
-/*
+
 &spi1 {
     compatible = "nordic,nrf-spim";
     status = "okay";
@@ -74,7 +74,6 @@
             irq-gpios = <&gpio0 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
             spi-max-frequency = <2000000>;
     };
-*/
 };
 
 &usbd {
